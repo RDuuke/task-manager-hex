@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary    # Para PostgreSQL
+# pymysql          # Para MariaDB (si usas MariaDB)

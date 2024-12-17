@@ -1,0 +1,30 @@
+version: '3.0'
+
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+      
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: rduuke
+      POSTGRES_PASSWORD: 1990
+      POSTGRES_DB: task-managerz
+    ports:
+      - "5432:5432"
