@@ -1,5 +1,5 @@
 backend/__pycache__/
 backend/.env
 backend/.vscode/
-backend/task-manager-hex/
+backend/task-manager-hex
 backend/db.sqlite3
